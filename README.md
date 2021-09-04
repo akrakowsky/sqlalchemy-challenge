@@ -5,7 +5,8 @@ Surfs Up
 
 ## A. SQLAlchemy
 
-1. 
+1. climate_starter.ipynb
+2. 
     1. 
     2. 
     3. 
@@ -14,9 +15,3 @@ Surfs Up
 3. ReadMe
 
 -----------
-
-# Observable 
-
-1. 
-2. 
-3. 
