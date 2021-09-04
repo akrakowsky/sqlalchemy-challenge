@@ -6,11 +6,8 @@ Surfs Up
 ## A. SQLAlchemy
 
 1. climate_starter.ipynb
-2. 
-    1. 
-    2. 
-    3. 
-    4. 
+2. app.py
+3. temp_analysis_bonus_1_starter.ipynb 
 2. License
 3. ReadMe
 
