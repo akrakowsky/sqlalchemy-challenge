@@ -81,12 +81,15 @@ def stations():
 
 @app.route("/api/v1.0/tobs")
 def tobs():
+    # Create our session (link) from Python to the DB
+    session = Session(engine)
+    
     # Find the last date and convert it to date format
     last_date = session.query(Measurement).order_by(Measurement.date.desc()).first()
-    last_date = dt.datetime.strptime(last_date.date, '%Y-%m-%d').date()
+    final_date = dt.datetime.strptime(last_date.date, '%Y-%m-%d').date()
 
     # Retrieve the last 12 months of temperature data
-    query_year = last_date - dt.timedelta(days=364)
+    query_year = final_date - dt.timedelta(days=364)
 
     # Find the most active station
     act_stn = [Measurement.station, func.count(Measurement.station)]
