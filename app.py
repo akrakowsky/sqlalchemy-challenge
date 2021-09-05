@@ -111,7 +111,7 @@ def tobs():
         active_dict = {}
         active_dict["date"] = date
         active_dict["tobs"] = tobs
-        top_temp.append(active_temp)
+        top_temp.append(active_dict)
         
     return jsonify(top_temp)
 
