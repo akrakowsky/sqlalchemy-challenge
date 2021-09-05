@@ -40,7 +40,7 @@ def welcome():
         f"/api/v1.0/stations<br/>"
         f"/api/v1.0/tobs<br/>"
         f"/api/v1.0/start/yyyy-mm-dd<br/>"
-        f"/api/v1.0/start/<start>/end/<end>"
+        f"/api/v1.0/start/yyyy-mm-dd/end/yyyy-mm-dd"
     )
 
 @app.route("/api/v1.0/precipitation")
@@ -147,14 +147,14 @@ def start_end(start, end):
     session = Session(engine)
 
     # Query the date greater than or equal to start
-    sel = [func.min(measurement.tobs),
-           func.avg(measurement.tobs),
-           func.max(measurement.tobs)
+    sel = [func.min(Measurement.tobs),
+           func.avg(Measurement.tobs),
+           func.max(Measurement.tobs)
     ]
     
     
     start_end_filter = session.query(*sel).\
-        filter(measurement.date.between(start,end)).all()
+        filter(Measurement.date.between(start,end)).all()
     start_end_list = [
         {"TMIN": start_end_filter[0][0]},
         {"TAVG": start_end_filter[0][1]},
