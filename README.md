@@ -1,5 +1,6 @@
 # sqlalchemy-challenge
 Surfs Up
+Use Python, SQLAlchemy, and Flask API to analyze the climate of Hawaii.
 
 # Table of contents
 
