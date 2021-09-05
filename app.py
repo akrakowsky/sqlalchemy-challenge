@@ -110,7 +110,7 @@ def tobs():
     for date, tobs in active_temp:
         active_dict = {}
         active_dict["date"] = date
-        active_dict["tobs"] = temperature
+        active_dict["tobs"] = tobs
         top_temp.append(active_temp)
         
     return jsonify(top_temp)
