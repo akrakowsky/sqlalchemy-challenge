@@ -70,7 +70,7 @@ def stations():
 
     """Return a list of all stations"""
     # Query all passengers
-    results = session.query(Station.station).disctinct().all()
+    results = session.query(Station.station).distinct().all()
 
     session.close()
 
