@@ -8,7 +8,10 @@ Surfs Up
 1. climate_starter.ipynb
 2. app.py
 3. temp_analysis_bonus_1_starter.ipynb 
-2. License
-3. ReadMe
+4. hawaii.sqlite
+5. hawaii_measurements.csv
+6. hawaii_stations.csv
+7. License
+8. ReadMe
 
 -----------
