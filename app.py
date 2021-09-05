@@ -62,9 +62,6 @@ def precipitation():
 
     return jsonify(all_prcp)
 
-
-if __name__ == '__main__':
-    app.run(debug=True)
     
 @app.route("/api/v1.0/stations")
 def stations():
@@ -114,8 +111,6 @@ def tobs():
         
     return jsonify(top_temp)
 
-if __name__ == '__main__':
-    app.run(debug=True)
 
 @app.route("/api/v1.0/start/<start>")
 def start_date(start):
