@@ -99,7 +99,7 @@ def tobs():
 
     # Gather the last 12 months of temperature measurements of the most active station 
     active_temp = session.query(Measurement.date, Measurement.tobs).\
-                        filter(func.strftime('%Y-%m-%d', Measurement.date) > query_date).\
+                        filter(func.strftime('%Y-%m-%d', Measurement.date) > query_year).\
                         filter(Measurement.station == active_station).all()
     
     # Close Session
