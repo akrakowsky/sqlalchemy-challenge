@@ -122,13 +122,13 @@ def start_date(start):
     session = Session(engine)
 
     # Query the date greater than or equal to start
-    sel = [func.min(measurement.tobs),
-           func.avg(measurement.tobs),
-           func.max(measurement.tobs)
+    sel = [func.min(Measurement.tobs),
+           func.avg(Measurement.tobs),
+           func.max(Measurement.tobs)
     ]
     
     
-    start_filter = session.query(*sel).filter(measurement.date >= start).all()
+    start_filter = session.query(*sel).filter(Measurement.date >= start).all()
     start_list = [
         {"TMIN": start_filter[0][0]},
         {"TAVG": start_filter[0][1]},
